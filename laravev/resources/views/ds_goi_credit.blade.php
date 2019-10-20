@@ -52,25 +52,28 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên lĩnh Vực</th>
-                                <th></th>
+                                <th>Tên Gói</th>
+                                <th>Credit</th>
+                                <th>Số tiền</th>
                                 
                             </tr>
                         </thead>
                     
                     
                         <tbody>
-                            @for($i=0 ; $i< 101 ;$i++)
+                            @foreach($result as $item)
                             <tr>
-                                <td>{{ $i }}</td>
-                                <td>{{ $i }}</td>
+                                <td>{{ $item->id }}</td>
+                                <td>{{ $item->ten_goi }}</td>
+                                <td>{{ $item->credit }}</td>
+                                <td>{{ $item->so_tien }}</td>
                                 <td>
                                     <button type="button" class="btn btn-purple waves-effect waves-light"><i class="mdi mdi-pencil-outline"></i></button>  
                                     <button type="button" class="btn btn-danger waves-effect waves-light"><i class="mdi mdi-trash-can-outline"></i></button>
                                 </td>
                             
                             </tr>
-                           @endfor
+                           @endforeach
                         </tbody>
                     </table>
 

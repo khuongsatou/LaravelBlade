@@ -40,3 +40,6 @@ Route::prefix('linh_vuc')->group(function(){
         })->name('themmoi');
     });
 });
+
+
+Route::get('goi_credit','GoiCreditController@index');
